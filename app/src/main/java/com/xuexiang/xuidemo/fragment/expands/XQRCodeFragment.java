@@ -38,7 +38,7 @@ import com.xuexiang.xuidemo.fragment.expands.qrcode.CustomCaptureActivity;
 import com.xuexiang.xuidemo.fragment.expands.qrcode.CustomCaptureFragment;
 import com.xuexiang.xuidemo.fragment.expands.qrcode.QRCodeProduceFragment;
 import com.xuexiang.xuidemo.utils.Utils;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xui.utils.XToastUtils;
 import com.xuexiang.xutil.app.IntentUtils;
 import com.xuexiang.xutil.app.PathUtils;
 
@@ -138,7 +138,6 @@ public class XQRCodeFragment extends BaseSimpleListFragment {
             case CUSTOM:
                 PageOption.to(CustomCaptureFragment.class)
                         .setRequestCode(REQUEST_CUSTOM_SCAN)
-                        .setNewActivity(true)
                         .open(this);
                 break;
             case DEFAULT:

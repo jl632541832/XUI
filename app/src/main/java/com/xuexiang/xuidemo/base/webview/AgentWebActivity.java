@@ -30,7 +30,7 @@ import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xui.widget.slideback.SlideBack;
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.base.BaseAppCompatActivity;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xui.utils.XToastUtils;
 
 import static com.xuexiang.xuidemo.base.webview.AgentWebFragment.KEY_URL;
 
@@ -47,7 +47,7 @@ public class AgentWebActivity extends BaseAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agent_web);
 
-        SlideBack.with(this)
+        SlideBack.withFixSize(this)
                 .haveScroll(true)
                 .callBack(this::finish)
                 .register();

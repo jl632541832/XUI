@@ -27,9 +27,8 @@ import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xuidemo.MyApp;
 import com.xuexiang.xuidemo.base.BaseActivity;
 import com.xuexiang.xuidemo.base.db.InternalDataBase;
-import com.xuexiang.xuidemo.utils.LocationService;
 import com.xuexiang.xuidemo.utils.TokenUtils;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xui.utils.XToastUtils;
 import com.xuexiang.xutil.XUtil;
 import com.xuexiang.xutil.common.StringUtils;
 
@@ -59,13 +58,11 @@ public final class XBasicLibInit {
     /**
      * 初始化工具类
      *
-     * @param application
+     * @param application 应用上下文
      */
     private static void initUtils(Application application) {
         XUtil.init(application);
         XUtil.debug(MyApp.isDebug());
-        //百度定位
-        LocationService.get().init(application);
         TokenUtils.init(application);
     }
 

@@ -83,6 +83,20 @@ public final class Utils {
     /**
      * 计算状态栏高度 getStatusBarHeight
      *
+     * @param context 上下文
+     * @return 状态栏高度
+     */
+    public static int getStatusBarHeight(Context context) {
+        if (context == null) {
+            return getStatusBarHeight();
+        }
+        return getInternalDimensionSize(context.getResources(),
+                STATUS_BAR_HEIGHT_RES_NAME);
+    }
+
+    /**
+     * 计算状态栏高度 getStatusBarHeight
+     *
      * @return 状态栏高度
      */
     public static int getStatusBarHeight() {
@@ -368,7 +382,7 @@ public final class Utils {
             PackageManager pm = context.getPackageManager();
             ApplicationInfo info = pm.getApplicationInfo(context.getPackageName(), 0);
             return info.loadIcon(pm);
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

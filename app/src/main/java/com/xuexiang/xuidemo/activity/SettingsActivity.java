@@ -32,7 +32,8 @@ import androidx.appcompat.app.ActionBar;
 
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.base.AppCompatPreferenceActivity;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xuidemo.utils.Utils;
+import com.xuexiang.xui.utils.XToastUtils;
 
 /**
  * 设置页面
@@ -125,12 +126,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         int id = item.getItemId();
         if (id == android.R.id.home) {
             if (!super.onMenuItemSelected(featureId, item)) {
-//                NavUtils.navigateUpFromSameTask(this);
                 finish();
+                Utils.syncMainPageStatus();
             }
             return true;
         }
         return super.onMenuItemSelected(featureId, item);
     }
 
+    @Override
+    public void onBackPressed() {
+        Utils.syncMainPageStatus();
+        super.onBackPressed();
+    }
 }

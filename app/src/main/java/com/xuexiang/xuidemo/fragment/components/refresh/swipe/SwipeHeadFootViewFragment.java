@@ -9,7 +9,7 @@ import com.xuexiang.xuidemo.DemoDataProvider;
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.adapter.SimpleRecyclerAdapter;
 import com.xuexiang.xuidemo.base.BaseFragment;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xui.utils.XToastUtils;
 import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 
 import butterknife.BindView;
@@ -55,7 +55,7 @@ public class SwipeHeadFootViewFragment extends BaseFragment {
 
         final SimpleRecyclerAdapter adapter = new SimpleRecyclerAdapter(DemoDataProvider.getDemoData1());
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener((itemView, position) -> {
+        adapter.setOnItemClickListener((itemView, item, position) -> {
             //需要注意的是，因为加了一个HeaderView，所以position都被自动加了1,因此获取内容时需要减1
             XToastUtils.toast("点击了第" + position + "个条目：" + adapter.getItem(position - 1));
         });

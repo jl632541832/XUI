@@ -27,7 +27,7 @@ Please read the [instruction document](https://github.com/xuexiangjys/XUI/wiki) 
 
 | WeChat public number   | juejin     |  zhihu    |  CSDN   |   jianshu   |   segmentfault  |   bilibili  |   toutiao
 |---------|---------|--------- |---------|---------|---------|---------|---------|
-| [我的Android开源之旅](https://ss.im5i.com/2021/06/14/6tqAU.png)  |  [Click me](https://juejin.im/user/598feef55188257d592e56ed/posts)    |   [Click me](https://www.zhihu.com/people/xuexiangjys/posts)       |   [Click me](https://xuexiangjys.blog.csdn.net/)  |   [Click me](https://www.jianshu.com/u/6bf605575337)  |   [Click me](https://segmentfault.com/u/xuexiangjys)  |   [Click me](https://space.bilibili.com/483850585)  |   [Click me](https://img.rruu.net/image/5ff34ff7b02dd)
+| [我的Android开源之旅](https://t.1yb.co/Irse)  |  [Click me](https://juejin.im/user/598feef55188257d592e56ed/posts)    |   [Click me](https://www.zhihu.com/people/xuexiangjys/posts)       |   [Click me](https://xuexiangjys.blog.csdn.net/)  |   [Click me](https://www.jianshu.com/u/6bf605575337)  |   [Click me](https://segmentfault.com/u/xuexiangjys)  |   [Click me](https://space.bilibili.com/483850585)  |   [Click me](https://img.rruu.net/image/5ff34ff7b02dd)
 
 ## Rapid integration of X-Library
 
@@ -74,13 +74,13 @@ allprojects {
 }
 ```
 
-2.Then, in the dependencies of the project:
+2.Then add in the dependencies of `build.gradle` of the application project (usually app):
 
 ```
 dependencies {
   ...
   //androidx project
-  implementation 'com.github.xuexiangjys:XUI:1.1.8'
+  implementation 'com.github.xuexiangjys:XUI:1.2.0'
 
   implementation 'androidx.appcompat:appcompat:1.3.1'
   implementation 'androidx.recyclerview:recyclerview:1.2.1'
@@ -168,13 +168,6 @@ protected void attachBaseContext(Context newBase) {
     // Injection font
     super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 }
-```
-
-## Proguard
-
-```
--keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }
-
 ```
 
 ----
@@ -315,6 +308,27 @@ J*o | 10.24￥ | WeChat
 *维 | 5￥ | WeChat
 *鑫 | 188.88￥ | Alipay
 *玉 | 10￥ | Alipay
+**贺 | 100￥ | Alipay
+**伟 | 65￥ | Alipay
+*G | 1￥ | WeChat
+M*u | 10.24￥ | WeChat
+S*m | 10.24￥ | WeChat
+T*g | 15￥ | WeChat
+*边 | 10.24￥ | WeChat
+*寻 | 20.48￥ | WeChat
+*凉 | 10.24￥ | WeChat
+S*y | 10.24￥ | WeChat
+M*n | 1￥ | WeChat
+J*e | 10.24￥ | WeChat
+*、 | 10.24￥ | WeChat
+禹*） | 1￥ | WeChat
+X*？ | 18.88￥ | WeChat
+*事 | 5￥ | WeChat
+*之 | 10￥ | WeChat
+*安 | 18.88￥ | WeChat
+*🎵 | 10.24￥ | WeChat
+*👔 | 10￥ | WeChat
+*洲 | 10￥ | WeChat
 
 ## Contact
 

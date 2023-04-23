@@ -32,7 +32,7 @@ import com.xuexiang.xui.widget.picker.widget.configure.TimePickerType;
 import com.xuexiang.xuidemo.DemoDataProvider;
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.base.BaseFragment;
-import com.xuexiang.xuidemo.utils.XToastUtils;
+import com.xuexiang.xui.utils.XToastUtils;
 import com.xuexiang.xutil.data.DateUtils;
 
 import java.util.Calendar;
@@ -77,10 +77,10 @@ public class TimePickerFragment extends BaseFragment {
                 showTimePickerDialog();
                 break;
             case R.id.btn_date_system:
-                showDatePickerDialog(getContext(), DatePickerDialog.THEME_DEVICE_DEFAULT_LIGHT, (TextView) view, Calendar.getInstance());
+                showDatePickerDialog(getContext(), R.style.XUITheme_AlertDialog, (TextView) view, Calendar.getInstance());
                 break;
             case R.id.btn_time_system:
-                showTimePickerDialog(getContext(), DatePickerDialog.THEME_DEVICE_DEFAULT_LIGHT, (TextView) view, Calendar.getInstance());
+                showTimePickerDialog(getContext(), R.style.XUITheme_AlertDialog, (TextView) view, Calendar.getInstance());
                 break;
             case R.id.btn_time_period:
                 showTimePeriodPicker();
@@ -102,6 +102,8 @@ public class TimePickerFragment extends BaseFragment {
                     .setTimeSelectChangeListener(date -> Log.i("pvTime", "onTimeSelectChanged"))
                     .setTitleText("日期选择")
                     .build();
+//            // 这样设置日月年显示
+//            mDatePicker.getWheelTime().getView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         }
         mDatePicker.show();
     }
